@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="content" style="width: 70%; margin: 100px auto;">
+        <h1>Bài 1: Nhập 3 số nguyên</h1>
+        <div class="form-group">
+            <label for="">Nhập số nguyên 1</label>
+            <input type="number" class="form-control" name="" id="soNguyen1" placeholder="Nhập số nguyên">
+
+        </div>
+        <!-- <div class="form-group">
+          <label for="">How much?</label>
+          <select class="form-control" name="" id="selectTipsValue">
+            <option disabled>Choose from list</option>
+            <option value="0.3">30% - Great</option>
+            <option value="0.2">20% - Good</option>
+            <option value="0.15">15% - Mediocre</option>
+            <option value="0.1">10% - Bad</option>
+            <option value=".05">5% - Horrible</option>
+          </select>
+        </div> -->
+        <div class="form-group">
+            <label for="">Nhập số nguyên 2</label>
+            <input type="number" name="" id="soNguyen2" class="form-control" placeholder="Nhập số nguyên">
+
+        </div>
+        <div class="form-group">
+            <label for="">Nhập số nguyên 3</label>
+            <input type="number" name="" id="soNguyen3" class="form-control" placeholder="Nhập số nguyên">
+
+        </div>
+        <button class="btn btn-success" id="btnMax">Từ thấp đến cao</button>
+        <div id="displayInfoBai1">
+            <h4 style="margin: 20px 0;">
+                <span  id="dpsoMin"></span>
+                , 
+                <span  id="dpso2nd"></span>
+                , 
+                <span  id="dpsoMax"></span>
+            </h4>
+            
+        </div>
+    </div>
+
+    <div class="content" style="width: 70%; margin: 100px auto;">
+        <h1>Bài 2: Chào hỏi</h1>
+        <div class="form-group">
+            <label for="">Ai đang dùng máy vậy?</label>
+            <input type="text" class="form-control" name="" id="famMem" placeholder="" value="">
+            <small id="helpId" class="form-text text-muted">Bố (B), Mẹ (M), anh Trai (A) và Em gái (E)</small>
+        </div>
+
+        <button class="btn btn-success" id="btnGreet">Xác nhận</button>
+        <div id="dpGreet" style="display: none;">
+            <h4 style="margin: 20px 0;"><p  id="txtGreet" style="display: inline;"></p></h4>
+            
+        </div>
+    </div>
+
+    <div class="content" style="width: 70%; margin: 100px auto;">
+        <h1>Bài 3: Số chẵn, lẻ</h1>
+        <div class="form-group">
+            <label for="">Số nguyên 1</label>
+            <input type="number" class="form-control" name="" id="intNum1" placeholder="Nhập số nguyên">
+        </div>
+        <div class="form-group">
+            <label for="">Số nguyên 2</label>
+            <input type="number" class="form-control" name="" id="intNum2" placeholder="Nhập số nguyên">
+        </div>
+        <div class="form-group">
+            <label for="">Số nguyên 3</label>
+            <input type="number" class="form-control" name="" id="intNum3" placeholder="Nhập số nguyên">
+        </div>
+
+        <button class="btn btn-danger" id="btnEvenOdd">Đếm số chẵn lẻ</button>
+        <div id="dpEvenOdd" style="display: none">
+            <h4 style="margin: 20px 0;;">
+                Có 
+                <span  id="txtEven"></span>
+                 số chẵn và 
+                <span  id="txtOdd"></span>
+                 số lẻ
+            </h4>
+            
+        </div>
+    </div>
+
+    <div class="content" style="width: 70%; margin: 100px auto;">
+        <h1>Bài 4: Tam giác</h1>
+        <div class="form-group">
+            <label for="">Nhập cạnh a</label>
+            <input type="number" class="form-control" name="" id="canhA" placeholder="Nhập số đo">
+        </div>
+        <div class="form-group">
+            <label for="">Nhập cạnh b</label>
+            <input type="number" class="form-control" name="" id="canhB" placeholder="Nhập số đo">
+        </div>
+        <div class="form-group">
+            <label for="">Nhập cạnh c</label>
+            <input type="number" class="form-control" name="" id="canhC" placeholder="Nhập số đo">
+        </div>
+
+        <button class="btn btn-success" id="btnTamGiac">Loại Tam Giác</button><br>
+        <div id="dpTamGiac" style="display: none">
+            <h4 style="margin: 20px 0;" id="txtTamGiac"></h4>
+            
+        </div><br>
+
+    </div>
+
+
+    <script src="./main.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
